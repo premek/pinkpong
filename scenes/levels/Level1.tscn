@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/Wall.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/loop.wav" type="AudioStream" id=2]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Ball.tscn" type="PackedScene" id=6]
+
+[node name="Level" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -776.0
+margin_top = -448.0
+margin_right = 1589.0
+margin_bottom = 1336.0
+color = Color( 0.968627, 0.823529, 0.960784, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ball" parent="." instance=ExtResource( 6 )]
+position = Vector2( -1296, 432 )
+speed = 400
+
+[node name="Player1" parent="." instance=ExtResource( 5 )]
+position = Vector2( 64, 320 )
+
+[node name="Player2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 960, 320 )
+scale = Vector2( -1, 1 )
+
+[node name="BallStartPosition" type="Position2D" parent="."]
+position = Vector2( 512, 320 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+
+[node name="Wall" parent="." instance=ExtResource( 1 )]
+position = Vector2( 512, 0 )
+scale = Vector2( 0.84, 1 )
+
+[node name="Wall2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 512, 600 )
+scale = Vector2( 0.840001, 1 )
