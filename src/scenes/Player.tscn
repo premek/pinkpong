@@ -17,7 +17,7 @@ color = Color( 0.678431, 0.0901961, 0.627451, 1 )
 polygon = PoolVector2Array( 0, -56, 4.16499, -55.4304, 7.99726, -53.8286, 11.2821, -51.3345, 13.8369, -48.0295, 15.4387, -44.1161, 16, -40, 16, 40, 15.434, 44.1198, 13.8414, 47.9919, 11.2913, 51.3123, 7.98128, 53.852, 4.10921, 55.4341, 0, 56 )
 
 [node name="GoalZone" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1248, -552 )
+position = Vector2( 1152, -552 )
 scale = Vector2( 1, 1.92 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]

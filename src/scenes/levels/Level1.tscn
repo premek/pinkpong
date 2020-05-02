@@ -22,10 +22,10 @@ position = Vector2( -1296, 432 )
 speed = 400
 
 [node name="Player1" parent="." instance=ExtResource( 5 )]
-position = Vector2( 64, 320 )
+position = Vector2( 128, 320 )
 
 [node name="Player2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 960, 320 )
+position = Vector2( 896, 320 )
 scale = Vector2( -1, 1 )
 
 [node name="BallStartPosition" type="Position2D" parent="."]
@@ -33,6 +33,7 @@ position = Vector2( 512, 320 )
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
+autoplay = true
 
 [node name="Wall" parent="." instance=ExtResource( 1 )]
 position = Vector2( 512, 0 )

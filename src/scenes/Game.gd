@@ -2,13 +2,14 @@ extends Node2D
 
 var next_ball_start = Vector2(1,1)
 var players = []
+export var win_score = 10
 export var current_level = 0
 var levels = []
 var levels_dir = "res://scenes/levels/"
 
 func _ready():
 	randomize()
-	load_levels()	
+	load_levels()
 	$HUD/StartButton.connect("pressed", self, "start", [0])
 	set_players()
 	
@@ -39,7 +40,7 @@ func start(scoring_player_index):
 	for player in players: 
 		if player.score > max_score: max_score = player.score
 #
-	if max_score >= 2: next_level()
+	if max_score >= win_score: next_level()
 
 	$CurrentLevel/Ball.velocity = Vector2(0,0)
 	$CurrentLevel/Ball.start($CurrentLevel/BallStartPosition.position)

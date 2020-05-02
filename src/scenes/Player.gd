@@ -6,28 +6,21 @@ signal score
 export var maxspeed = 800
 export var score = 0
 var speed = 0
-	
 var screen_size
+var dragging = false
+var drag_radius = 120
 
 func _ready():
 	screen_size = get_viewport_rect().size
 
-func _process(delta):
 
-	if Input.is_action_pressed("ui_down"):
-		speed += 0.2
-	if Input.is_action_pressed("ui_up"):
-		speed -= 0.2
-		
-	speed *= 0.8
-		
-	position.y += clamp(speed*maxspeed, -maxspeed, maxspeed) * delta
-	position.y = clamp(position.y, 50, screen_size.y - 50)
+func _input(event):
+	if event is InputEventScreenDrag and (event.position - position).length() < drag_radius:
+		position.y = clamp(event.position.y, 50, screen_size.y - 50)
 
 func goal():
 	score = score + 1
 	emit_signal("score")
-	
 
 
 func _on_Player_hit():

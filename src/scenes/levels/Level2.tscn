@@ -20,13 +20,13 @@ __meta__ = {
 [node name="Ball" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1720, 200 )
 scale = Vector2( 0.547937, 0.56 )
-speed = 600
+speed = 500
 
 [node name="Player1" parent="." instance=ExtResource( 4 )]
-position = Vector2( 64, 320 )
+position = Vector2( 120, 320 )
 
 [node name="Player2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 960, 320 )
+position = Vector2( 896, 320 )
 scale = Vector2( -1, 1 )
 
 [node name="BallStartPosition" type="Position2D" parent="."]
@@ -40,11 +40,11 @@ autoplay = true
 position = Vector2( 512, 0 )
 
 [node name="Wall3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 512, -448 )
+position = Vector2( 352, -448 )
 rotation = 1.309
 
 [node name="Wall4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 512, 1040 )
+position = Vector2( 672, 1040 )
 rotation = 1.309
 
 [node name="Wall2" parent="." instance=ExtResource( 2 )]
