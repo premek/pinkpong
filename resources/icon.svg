@@ -62,9 +62,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.959798"
-     inkscape:cx="3.0754064"
-     inkscape:cy="492.98659"
+     inkscape:zoom="0.70000001"
+     inkscape:cx="263.66171"
+     inkscape:cy="109.84163"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -72,9 +72,9 @@
      borderlayer="true"
      inkscape:showpageshadow="false"
      inkscape:window-width="1228"
-     inkscape:window-height="696"
-     inkscape:window-x="337"
-     inkscape:window-y="79"
+     inkscape:window-height="733"
+     inkscape:window-x="393"
+     inkscape:window-y="148"
      inkscape:window-maximized="0"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -156,12 +156,15 @@
        cy="178.46664"
        r="2.105575e-13" />
     <rect
-       style="opacity:1;fill:#ffa3ed;fill-opacity:1;stroke:none;stroke-width:0.81627804;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#ffcdf5;fill-opacity:1;stroke:none;stroke-width:0.81627804;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4543"
        width="135.46666"
        height="135.46666"
        x="0"
-       y="161.53331" />
+       y="161.53331"
+       inkscape:export-filename="/home/premek/prog/godot/pong/src/assets/icon.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <path
        style="opacity:1;fill:#f44de8;fill-opacity:1;stroke:#cc00b4;stroke-width:5.29166651;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 96.923279,273.19891 c 7.491601,1.1e-4 13.564861,-5.86307 13.565071,-13.09584 8e-5,-7.23296 -6.07326,-13.09646 -13.565071,-13.09636 H 38.54338 c -7.49181,-1e-4 -13.565151,5.8634 -13.565063,13.09636 2.09e-4,7.23277 6.073465,13.09595 13.565063,13.09584 z"
