@@ -1,53 +1,51 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://cvmewavqqv4xy"]
 
-[ext_resource path="res://scenes/Ball.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/Wall.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/loop.wav" type="AudioStream" id=5]
+[ext_resource type="PackedScene" path="res://scenes/Ball.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://c1lbair2g41fh" path="res://scenes/Wall.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://crsrtxujor78y" path="res://scenes/Player.tscn" id="4"]
+[ext_resource type="AudioStream" uid="uid://c2mq8ic41b0bx" path="res://assets/loop.wav" id="5"]
 
 [node name="Level" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = -776.0
-margin_top = -448.0
-margin_right = 1589.0
-margin_bottom = 1336.0
-color = Color( 0.968627, 0.823529, 0.960784, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+offset_left = -776.0
+offset_top = -448.0
+offset_right = 1589.0
+offset_bottom = 1336.0
+color = Color(0.968627, 0.823529, 0.960784, 1)
 
-[node name="Ball" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1720, 200 )
-scale = Vector2( 0.547937, 0.56 )
+[node name="Ball" parent="." instance=ExtResource("1")]
+position = Vector2(586, 328)
+scale = Vector2(0.547937, 0.56)
 speed = 500
 
-[node name="Player1" parent="." instance=ExtResource( 4 )]
-position = Vector2( 120, 320 )
+[node name="Player1" parent="." instance=ExtResource("4")]
+position = Vector2(182, 283)
 
-[node name="Player2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 896, 320 )
-scale = Vector2( -1, 1 )
+[node name="Player2" parent="." instance=ExtResource("4")]
+position = Vector2(958, 310)
+scale = Vector2(-1, 1)
 
-[node name="BallStartPosition" type="Position2D" parent="."]
-position = Vector2( 512, 320 )
+[node name="BallStartPosition" type="Marker2D" parent="."]
+position = Vector2(590, 325)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 5 )
+stream = ExtResource("5")
 autoplay = true
 
-[node name="Wall" parent="." instance=ExtResource( 2 )]
-position = Vector2( 512, 0 )
+[node name="Wall" parent="." instance=ExtResource("2")]
+position = Vector2(512, 0)
 
-[node name="Wall3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 352, -448 )
+[node name="Wall3" parent="." instance=ExtResource("2")]
+position = Vector2(407, -879)
 rotation = 1.309
 
-[node name="Wall4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 672, 1040 )
+[node name="Wall4" parent="." instance=ExtResource("2")]
+position = Vector2(745, 1490)
 rotation = 1.309
 
-[node name="Wall2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 512, 600 )
+[node name="Wall2" parent="." instance=ExtResource("2")]
+position = Vector2(512, 600)
+
 [connection signal="score" from="Player1" to="." method="start"]
 [connection signal="score" from="Player2" to="." method="start"]

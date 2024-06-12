@@ -1,43 +1,48 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=3 uid="uid://cdnojawwtce3f"]
 
-[ext_resource path="res://assets/font.tres" type="DynamicFont" id=2]
+[ext_resource type="FontFile" uid="uid://bxtdukw6dsiw0" path="res://assets/font.tres" id="2"]
+[ext_resource type="FontFile" uid="uid://d3yh0pjsjno1k" path="res://assets/OstrichSans-Heavy.otf" id="2_7nkbo"]
 
-[sub_resource type="InputEventAction" id=1]
-action = "ui_select"
+[sub_resource type="LabelSettings" id="LabelSettings_hx717"]
+font_size = 46
+font_color = Color(1, 0.843137, 1, 1)
 
-[sub_resource type="ShortCut" id=2]
-shortcut = SubResource( 1 )
+[sub_resource type="Theme" id="Theme_v6tfr"]
+default_font = ExtResource("2_7nkbo")
+default_font_size = 69
+
+[sub_resource type="Shortcut" id="2"]
 
 [node name="HUD" type="CanvasLayer"]
 
 [node name="ScoreLabel" type="Label" parent="."]
+anchors_preset = 10
 anchor_right = 1.0
-margin_top = 18.0557
-margin_bottom = 59.0557
-custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color = Color( 1, 0.803922, 0.988235, 1 )
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+offset_top = 18.0557
+offset_bottom = 59.0557
+theme_override_colors/font_color = Color(1, 0.803922, 0.988235, 1)
+theme_override_fonts/font = ExtResource("2")
+label_settings = SubResource("LabelSettings_hx717")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="StartButton" type="Button" parent="."]
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -113.05
-margin_top = -34.0
-margin_right = 117.95
-margin_bottom = 35.0
-rect_scale = Vector2( 0.997891, 1 )
-custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color = Color( 0.501961, 0.0470588, 0.552941, 1 )
-custom_colors/font_color_hover = Color( 0.890196, 0.301961, 0.894118, 1 )
-custom_colors/font_color_pressed = Color( 0.388235, 0.145098, 0.372549, 1 )
-shortcut = SubResource( 2 )
+offset_left = -113.05
+offset_top = -34.0
+offset_right = 117.95
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.990816, 1)
+theme = SubResource("Theme_v6tfr")
+theme_override_colors/font_color = Color(0.501961, 0.0470588, 0.552941, 1)
+theme_override_colors/font_pressed_color = Color(0.388235, 0.145098, 0.372549, 1)
+theme_override_colors/font_hover_color = Color(0.890196, 0.301961, 0.894118, 1)
+shortcut = SubResource("2")
 text = "Start"
 flat = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
